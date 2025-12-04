@@ -34,7 +34,7 @@ End-to-end system for analyzing and forecasting Nordic power prices:
 - Comprehensive backtesting framework (6 performance metrics)
 - Production pipeline with daily forecast generation
 
-### 🔄 Week 4: Dashboard (Optional - 2 hours)
+### 🔄 Week 4: Dashboard (Work in progress)
 - Streamlit interactive visualization
 - Real-time forecast display
 - Historical performance charts
