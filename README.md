@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 End-to-end system for analyzing and forecasting Nordic power prices:
 - **Data Pipeline**: Automated fetching from ENTSO-E API
@@ -20,28 +20,28 @@ End-to-end system for analyzing and forecasting Nordic power prices:
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
-### ✅ Week 1-2: Data Infrastructure (1,250 lines)
+### Week 1-2: Data Infrastructure (1,250 lines)
 - ENTSO-E API client with retry logic and rate limiting
 - SQLite database with proper schema and indexing
 - Smart data fetcher with backfilling and gap detection
 - Configuration management with environment variables
 
-### ✅ Week 3: GARCH Volatility Forecasting (1,000 lines)
+### Week 3: GARCH Volatility Forecasting (1,000 lines)
 - GARCH(1,1) model with maximum likelihood estimation
 - 24-hour ahead volatility forecasts with confidence intervals
 - Comprehensive backtesting framework (6 performance metrics)
 - Production pipeline with daily forecast generation
 
-### 🔄 Week 4: Dashboard (Work in progress)
+### Week 4: Dashboard (Work in progress)
 - Streamlit interactive visualization
 - Real-time forecast display
 - Historical performance charts
 
 ---
 
-## 📊 Technical Specifications
+## Technical Specifications
 
 ### Data Pipeline
 ```python
@@ -75,7 +75,7 @@ forecast_json = pipeline.get_latest_forecast()
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10 (recommended for package compatibility)
@@ -124,7 +124,7 @@ Nordic Power Prices - Production System
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nordic-power-dashboard/
@@ -156,7 +156,7 @@ nordic-power-dashboard/
 
 ---
 
-## 🔬 Technical Deep Dive
+## Technical Deep Dive
 
 ### GARCH(1,1) Model
 
@@ -196,7 +196,7 @@ Where:
 
 ---
 
-## 📈 Business Applications
+## Business Applications
 
 ### For Day-Ahead Trading
 
@@ -222,7 +222,7 @@ Where:
 
 ---
 
-## 🎓 Academic Foundation
+## Academic Foundation
 
 ### Thesis Connection: Heston-Nandi GARCH
 
@@ -243,7 +243,7 @@ Where:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Unit Tests
 
@@ -265,15 +265,15 @@ python -m src.models.pipeline
 
 ### Expected Test Results
 
-- ✅ API client: Fetch 24 hours Bergen prices (~5 seconds)
-- ✅ Database: Insert/query 1,000 records (~0.5 seconds)
-- ✅ GARCH: Estimate model on 168 hours (~2 seconds)
-- ✅ Forecast: Generate 24-hour forecast (~1 second)
-- ✅ Backtest: 7-day rolling forecast (~30 seconds)
+-  API client: Fetch 24 hours Bergen prices (~5 seconds)
+-  Database: Insert/query 1,000 records (~0.5 seconds)
+-  GARCH: Estimate model on 168 hours (~2 seconds)
+-  Forecast: Generate 24-hour forecast (~1 second)
+-  Backtest: 7-day rolling forecast (~30 seconds)
 
 ---
 
-## 📊 Database Schema
+## Database Schema
 
 ```sql
 CREATE TABLE prices (
@@ -324,7 +324,7 @@ print(config.zones)      # ['NO_1', 'NO_2', 'NO_3', 'NO_4', 'NO_5']
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -351,107 +351,26 @@ python -m src.data.fetcher
 - Database stores UTC+01:00 aware datetimes
 - Handled automatically by pipeline
 
----
-
-## 📚 Dependencies
-
-### Core (Week 1-2)
-```
-pandas>=2.2.0
-numpy>=1.26.0
-requests>=2.31.0
-entsoe-py>=0.6.8
-python-dotenv>=1.0.0
-```
-
-### GARCH (Week 3)
-```
-arch>=5.3.0
-statsmodels>=0.14.0
-scipy>=1.11.0
-scikit-learn>=1.3.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-```
-
-### Dashboard (Week 4)
-```
-streamlit>=1.28.0
-plotly>=5.17.0
-```
 
 ---
 
-## 🎯 Roadmap
-
-### ✅ Completed
-- [x] ENTSO-E API integration
-- [x] SQLite database with smart fetching
-- [x] GARCH(1,1) volatility forecasting
-- [x] Comprehensive backtesting framework
-- [x] Production pipeline
-- [x] Complete documentation
-
-### 🔄 In Progress
-- [ ] Streamlit dashboard (Week 4)
-- [ ] Multi-zone visualization
-- [ ] Performance monitoring
-
-### 🚀 Future Enhancements
-- [ ] GJR-GARCH (asymmetric volatility)
-- [ ] Regime-switching GARCH
-- [ ] Multivariate GARCH (cross-zone correlations)
-- [ ] Machine learning ensemble (GARCH + LSTM)
-- [ ] Real-time API endpoint
-- [ ] Automated daily reports
-
-
----
-
-## 🤝 Contributing
-
-This is a portfolio project for job applications. Not accepting contributions, but feel free to fork and adapt!
-
----
-
-## 📄 License
+## License
 
 MIT License - See LICENSE file for details
 
 ---
 
-## 👤 Author
-
-**Amalie Berg**
-- Email: berg.amalie@outlook.com
-- LinkedIn: [linkedin.com/in/amalie-berg](https://linkedin.com/in/amalie-berg)
-- Location: Bergen, Norway
-
-### Education
-- M.S. Economics & Business Administration, NHH (2025)
-- CEMS Master in International Management (2025)
-- M.S. Physics (Energy Technology), University of Oslo (2019)
-- M.S. Software Engineering, Quantic (In Progress)
-
-### Experience
-- Risk Analyst, Storebrand Asset Management
-- Consultant, ABB (Predictive Analytics)
-- Researcher, NMBU (Renewable Energy)
-- Teacher, Equinor Leadership Program
-
----
-
-## 🎯 Project Goals
+## Project Goals
 
 **Primary Objective:**
 Demonstrate advanced quantitative finance + production engineering skills
 
 **Learning Outcomes:**
-- ✅ Production data pipeline design
-- ✅ GARCH volatility modeling
-- ✅ Rigorous backtesting methodology
-- ✅ End-to-end system integration
-- ✅ Professional software engineering practices
+- Production data pipeline design
+- GARCH volatility modeling
+- Rigorous backtesting methodology
+- End-to-end system integration
+- Professional software engineering practices
 
 **Business Value:**
 - Volatility forecasts enable trading strategies
@@ -461,22 +380,7 @@ Demonstrate advanced quantitative finance + production engineering skills
 
 ---
 
-## 📊 Project Statistics
-
-- **Total Code:** 2,450 lines
-- **Modules:** 7 files
-- **Tests:** 100% passing
-- **Documentation:** Comprehensive
-- **Development Time:** 3 weeks
-- **Data Coverage:** 5 zones, up to 2 years
-- **Forecast Horizon:** 24 hours
-- **Backtest Period:** 7-30 days
-- **Direction Accuracy:** 71%
-- **Database Size:** ~0.2 MB (675 records)
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 **Quick Setup (5 minutes):**
 
@@ -499,11 +403,3 @@ python -m src.models.pipeline
 - Plots created
 
 ---
-
-## ⭐ Star This Repository
-
-If you find this project useful or impressive, please star it!
-
----
-
-**Built with Claude, 💻 and ☕ in Bergen, Norway**
