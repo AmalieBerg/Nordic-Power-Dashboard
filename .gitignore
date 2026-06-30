@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Data (don't commit large datasets)
+data/*.csv
+data/*.parquet
+
+# Keep the data folder but not its contents
+!data/.gitkeep
+
+# Create .gitignore file (copy this entire content)
+echo venv/ > .gitignore
+echo __pycache__/ >> .gitignore
+echo *.pyc >> .gitignore
+echo .env >> .gitignore
+echo data/prices.db >> .gitignore
+echo *.db >> .gitignore
+echo .DS_Store >> .gitignore
+echo .vscode/ >> .gitignore
+echo *.log >> .gitignore
+
+results/
+logs/
+__pycache__/
+*.pyc
+venv/
+.env
+data/*.db
